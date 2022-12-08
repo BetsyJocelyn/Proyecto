@@ -6,7 +6,7 @@ header{
     align-items: center;
     margin-left: 50px;
     margin-right: 50px;
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid pink;
 }
 
 footer{
@@ -17,7 +17,7 @@ footer{
     align-items: center;
     margin-left: 50px;
     margin-right: 50px;
-    border-bottom: 15px solid green;
+    border-bottom: 15px solid pink;
     
 }
 .logo{
