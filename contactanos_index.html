@@ -15,9 +15,9 @@
            <img src="imagenes/logo.jpg.webp" style="width: 400px">
        </a>
        <nav>
-           <a href="" id="1">AYUDA</a>
-           <a href="contactanos_index.html" id="2">CONTACTANOS</a>
-           <a href="" id="3">SUSCRIBETE</a>
+           <a href="" id="m4">AYUDA</a>
+           <a href="" id="m5">CONTACTANOS</a>
+           <a href="" id="m6">SUSCRIBETE</a>
            <button type="button" onclick="login();" class="btn btn-success" style="font-size: 30px" >LOGIN</button> 
            <a href="" class="nav-link">
                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -37,14 +37,22 @@
        </nav>
    </header>
    <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
+   <div class="container">
+      <div class="form_top">
+         <h2 id="h2">CONTACTANOS</h2> 
+      </div>
+      <form class="form_reg" method="post" action="correo.php">
+          <input class="input" type="text" name="subjet" placeholder="&#128100;Nombre" required>
+          <br>
+          <input class="input" type="email" name="from" placeholder="&#128100;Correo" required>
+          <br>
+          <textarea class="input" name="msg" id="msg" cols="80" rows="10" placeholder="Escribenos tu comentario">
+          </textarea>
+          <br>
+          <input type="submit">
+      </form>
+       
+   </div>
    <br>
   <footer>
      <a href="index.html" id="imagen1">
