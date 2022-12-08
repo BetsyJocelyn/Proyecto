@@ -7,6 +7,8 @@ header{
     margin-left: 50px;
     margin-right: 50px;
     border-bottom: 3px solid pink;
+    font-family: 'Lato', sans-serif;
+    font-size:30px;
 }
 
 footer{
@@ -17,7 +19,11 @@ footer{
     align-items: center;
     margin-left: 50px;
     margin-right: 50px;
-    border-bottom: 15px solid pink;
+    border-bottom: 5px solid pink;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    
+    
     
 }
 .logo{
@@ -33,5 +39,5 @@ nav a{
     padding-right: 10px;
 }
 nav a:hover{
-    color:green;
+    color:pink;
 }
