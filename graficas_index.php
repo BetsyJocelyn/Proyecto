@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>PASTELERIA</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
   </head>
   <link rel="stylesheet" href="estilos.css" />
   <link
@@ -85,16 +87,32 @@
         </a>
       </nav>
     </header>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    
+    <div class="container">
+      <h1>Graficar Ventas</h1><br>
+      <button id="mostrarGrafica" type="button" class="btn_form">Mostrar</button>
+      <button id="ocultarGrafica" type="button" class="btn_form">Ocultar</button><br>
+      <canvas id="graficaMes"></canvas>
+    </div>
+
+    <script src="graficaMes.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $("#graficaMes").hide();
+
+        $("#mostrarGrafica").click(function(){
+          $("#graficaMes").show();
+        });
+
+        $("#ocultarGrafica").click(function(){
+          $("#graficaMes").hide();
+        });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
     <footer>
       <a href="index.html" id="imagen1">
         <img src="imagenes/logo.jpg.webp" style="width: 200px" />
