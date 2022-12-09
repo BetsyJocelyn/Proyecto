@@ -95,3 +95,10 @@ input,.btn_submit{
     background-color: indianred;
 }
 
+h3{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: pink;
+    font-size: 30px;
+}
+
