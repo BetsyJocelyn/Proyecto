@@ -83,22 +83,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="password" name="password" class="form-control">
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
-            <div class=form-group>
-                <div class="container">
-                    <div class="wrapper">
-                        <canvas id="canvas" width="200" height="70"></canvas>
-                        <button id="reload-button">
-                            <i class="fa-solid fa-arrow-rotate-right"></i>
-                        </button>
-                    </div>
-                <input
-                type="text"
-                id="user-input"
-                placeholder="Enter the text in the image"/>
-                  <button name="ingresar" id="submit-button" type="submit" class="btn btn-primary">Ingresar</button>
-                  
-                </div>
-            </div>
             
             <p>¿No tienes una cuenta? <a href="register.php">Regístrate ahora</a>.</p>
         </form>

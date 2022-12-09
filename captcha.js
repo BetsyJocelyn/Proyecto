@@ -1,4 +1,3 @@
-
 let submitButton = document.getElementById("submit-button");
 let userInput = document.getElementById("user-input");
 let canvas = document.getElementById("canvas");
@@ -45,12 +44,16 @@ function triggerFunction() {
 }
 
 reloadButton.addEventListener("click", triggerFunction);
+
 window.onload = () => triggerFunction();
+
 submitButton.addEventListener("click", () => {
   if (userInput.value === text) {
-    alert("Success");
+    window.open("index_login.php");
   } else {
-    alert("Incorrect");
+    alert(
+      "El captcha capturado es incorrecto. Por favor intentelo nuevamente."
+    );
     triggerFunction();
   }
 });
