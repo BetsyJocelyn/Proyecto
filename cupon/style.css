@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Segoe UI';
+
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image:
+        linear-gradient(-45deg, #882BA5, #B02D9B);
+}
+
+.center {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coupon_cont-center{
+    width: 400px;
+    height: 600px;
+
+    background-color: #505050;
+    box-shadow: 0px 10px 10px #00000030;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; }
+h3{
+    font-size: 40px;
+    font-weight: bold;
+    color: #7e57c2;
+}
+
+span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #c25757;
+}
+.copiar_coupon{
+    width: 360px;
+    height: 200px;
+
+    background-color: #e6d8ff;
+    box-shadow: 0px 5px 5px #00000030;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.canjear_coupon {
+    width: 360px;
+    height: 200px;
+
+    background-color: #e6d8ff;
+    box-shadow: 0px 5px 5px #00000030;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.txt_cont{
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price_cont{
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action_cont{
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 160px;
+    height: 40px;
+
+    outline: none;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+
+    color: #333;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+button{
+    width: 160px;
+    height: 40px;
+
+    background-color: #333;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
