@@ -1,0 +1,174 @@
+  <div class="coupon_cont-center">
+            <div class="coupon_cont">
+
+                <div class="copiar_coupon">
+                    <div class="txt_cont"> <h2>precio actual</h2> </div>
+                
+                    <div class="price_cont"> <h3 id="number1">100</h3> <h3>$</h3> </div>
+
+                    <div class="action_cont">
+                        <input id="input1" type="text" value="54ldqwer23">
+                        <button id="btn1" onclick="copyCoupon()">copiar coupon</button>
+                    </div>
+                </div>
+
+                <div class="canjear_coupon">
+                    <div class="txt_cont">
+                        <h2>precio de 50% descuento</h2>
+                    </div>
+                 
+                    <div class="price_cont" id="discount">
+                        <h3 style="font-size: 15px; width: 300px;">Haz click en el buton canjear coupon para obtener un 50% de descuento</h3>
+                    </div>
+                    
+                    <div class="action_cont">
+                        <input id="input2" type="text" placeholder="pegar coupon">
+                        <button onclick="canjearCoupon()" id="btn2">canjear coupon</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+.coupon_cont-center{
+    width: 400px;
+    height: 600px;
+
+    background-color: #505050;
+    box-shadow: 0px 10px 10px #00000030;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+}
+h3{
+    font-size: 40px;
+    font-weight: bold;
+    color: #7E57C2;
+}
+span{ color: #C25757; font-size: 20px; font-weight: bold;}
+
+.copiar_coupon{
+    width: 360px;
+    height: 200px;
+
+    background-color: #E6D8FF;
+    box-shadow: 0px 5px 5px #00000030;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.canjear_coupon {
+    width: 360px;
+    height: 200px;
+
+    background-color: #E6D8FF;
+    box-shadow: 0px 5px 5px #00000030;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.txt_cont{
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price_cont{
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action_cont{
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 150px;
+    height: 40px;
+
+    outline: none;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    color: #333333;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+button{
+    width: 150px;
+    height: 40px;
+
+    background-color: #333333;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+function copyCoupon() {
+    let copyTxt = document.getElementById("input1");
+    let btnTxt = document.getElementById("btn1");
+
+    copyTxt.select();
+    copyTxt.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(copyTxt.value);
+
+    if (btnTxt.innerHTML === "copiar coupon") {
+        btnTxt.innerHTML = "coupon copiado";
+    } else {
+        btnTxt.innerHTML = "coupon copiado";
+    }
+}
+
+function canjearCoupon() {
+    let canjearTxt = document.getElementById("input2").value;
+    let canjearBtn = document.getElementById("btn2");
+
+    let number = document.getElementById("number1").innerHTML;
+    let discount = document.getElementById("discount");
+
+    function getPercent(percent) {
+        return number / 100 * percent;
+    }
+    let percentResult = getPercent(50);
+
+    if (canjearTxt === "54ldqwer23") {
+        canjearBtn.innerHTML = "coupon canjeado";
+        //number2.innerHTML = percentResult;
+        discount.innerHTML = `<h3 id="number2">${percentResult}</h3><h3>$</h3><span>${number}$</span>`;
+        //alert("si son iguales."); 
+
+    } else if (canjearTxt === "") {
+        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">aun no has pegado el codigo 🤔</h3>';
+        //alert("aun no has pegado el coupon");
+
+    } else if (canjearTxt !== "54ldqwer23") {
+        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">el coupon no es valido 🥲</h3>';
+        //alert("el coupon no es valido");
+    }
+}

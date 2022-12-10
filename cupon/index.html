@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="/script.js" defer></script>
+    <title>coupon de descuento</title>
+</head>
+<body>
+    <div class="center">
+        <div class="coupon_cont-center">
+
+            <div class="coupon_cont">
+
+                <div class="copiar_coupon">
+                    <div class="txt_cont"><h2>Precio Actual</h2></div>
+                    <div class="price_cont"> <h3 id="number1">200</h3> <h3>$</h3> </div>
+
+                    <div class="action_cont">
+                        <input id="input1" type="text" value="54ldqwer23">
+                        <button id="btn1" onclick="copyCoupon()">copiar cupon</button>
+                    </div>
+                </div>
+
+                <div class="canjear_coupon">
+                    <div class="txt_cont"><h2>Precio de un 50% de descuento</h2></div>
+                    <div class="price_cont" id="discount">
+                        <h3 style="font-size: 15px; width: 300px;">
+                        Haz click en el buton canjear cupon para obtener un 50% de descuento
+                        </h3>
+                    </div>
+
+                    <div class="action_cont">
+                        <input id="input2" type="text" placeholder="pergar codigo">
+                        <button id="btn2" onclick="canjearCoupon()">canjear cupon</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
