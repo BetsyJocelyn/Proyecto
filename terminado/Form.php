@@ -1,5 +1,5 @@
 <?php
-    
+     session_start();
     $servidor='localhost:3305';
     $cuenta='root';
     $password='';
@@ -21,16 +21,16 @@
          if(isset($_POST['submit'])&& !empty($_POST['id'])){
                 //obtenemos datos del formulario
                 $id = $_POST['id'];
-                $nombre =$_POST['nombre'];
-                $categoria =$_POST['categoria'];
-                $descripcion =$_POST['descripcion'];
-                $exisistencia =$_POST['existencia'];
-                $precio =$_POST['precio'];
-                $imagen =$_POST['imagen'];
+                $nom =$_POST['nombre'];
+                $des =$_POST['descripcion'];
+                $exis =$_POST['existencia'];
+                $prec =$_POST['precio'];
+                $categ =$_POST['categoria'];
+                $Imagen = file_get_contents($_POST['imagen']);
                 
                 //hacemos cadena con la sentencia mysql para insertar datos
-                $sql = "INSERT INTO items (id, nombre, descripcion, existencia, precio, categoria, imagen) 
-                VALUES('$id','$nombre','$descripcion',' $existencia','$precio','$categoria','$imagen')";
+                $sql = "INSERT INTO items (id, nombre, descripcion , existencia, precio, categoria, imagen) 
+                VALUES('$id','$nom','$des ',' $exis','$prec','$categ','$Imagen')";
                 $conexion->query($sql);//aplicamos sentencia que inserta datos en la tabla items de la base de datos
                 if ($conexion->affected_rows >= 1){ //revisamos que se inserto un registro
                     echo '<script> alert("registro insertado") </script>';
@@ -48,7 +48,7 @@
                 echo '<tr>';
                     echo '<th>id</th>';
                     echo '<th>nombre</th>'; 
-                    echo '<th>descripcion</th>';
+                    echo '<th>descripcion </th>';
                     echo '<th>existencia</th>';
                     echo '<th>precio</th>';
                     echo '<th>categoria</th>';
@@ -83,7 +83,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -112,14 +112,14 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post' enctype="multipart/form-data">
                     <h2>Productos...</h2>
-                    <!--<div class="form-group">
+                   <div class="form-group">
                         <label for="id">ID_Producto</label>
                         <input type="number" name="id" class="form-control" id="id" placeholder="">
-                    </div> -->
+                    </div> 
                     <div class="form-group">
-                        <label for="id">Nombre </label>
+                        <label for="nombre">Nombre </label>
                         <input type="text" class="form-control" name="nombre" id="nombre" placeholder="">
                     </div>
                     <div class="form-group">
@@ -139,11 +139,11 @@
                         <input type="text" id="categoria" name="categoria" class="form-control" placeholder=" ">
                     </div>
                     <div class="form-group">
-                        <label for="nombrearc">Imagen</label>
+                        <label for="imagen">Imagen</label>
                         <input type="varchar" id="imagen" name="imagen" class="form-control" placeholder=" ">
                     </div>
                     <li class="form-row">
-                    <button  type="submit" name="submit" >Agregar</button>
+                    <button class="btn btn-success" type="submit" name="submit" >Agregar</button>
                     <button  type="submit" name="submit"><a href="Modificar.php">Modificar</a></button>
                     <button  type="submit" name="submit" ><a href="Eliminar.php">Eliminar</a></button>
                     <button   type="submit" name="submit" ><a href="index.php">Menu</a></button>
