@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pago en OXXO</title>
+<style>
+table, th, td {
+  border: 1px solid #000000;
+    justify-content: center;
+    background-color: rgb(255, 201, 247);
+    text-align: center;
+        
+</style>
+</head>
+<body>
+<table style="width:23%" >
+  <tr>
+    <th colspan="2">PAGO EN OXXO</th> 
+    </tr>
+    <tr>
+   <td>
+ 
+    <img src="imagen/oxxo.png" height="105" width="260" />
+    <br>
+    <br>
+    <br>
+    <div class="card-body">
+                     <div class="inputBox">
+                   <span>Nom. usuario :</span>
+                   <input type="text" placeholder="john deo">
+               </div>
+               <br>
+              <div class="inputBox">
+                     <span>Num. de tarjeta:</span>
+                     <input type="text" placeholder="123 456 789">
+                 </div>
+                  <br>
+              <div class="inputBox">
+                     <span>CVC:</span>
+                     <input type="text" placeholder="123 456">
+                 </div>
+                  <br>
+                 <div class="inputBox">
+                     <span>Fecha-expiracion:</span>
+                     <input type="text" placeholder="02/12/2022">
+                     </div>
+                     <br>
+                     <br>
+                    <br>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <button  class="btn btn-success btn-lg">
+                              <i class="fa fa-check-square"></i>PAGAR
+                               </button>
+                               
+                           <br>        
+                           
+                           <img src="imagen/reposteria.png" height="132" width="260" />
+                            
+                        </div>
+                         
+                     </div>
+                      
+               <input type="hidden" name="conektaTokenId" value="">
+           
+           <script>
+               
+                Conecta.setPublicKey("key_KRNMB8gTJdgrXuzcXsteJw9w");
+               var conektaSuccessResponseHand1er= Function(token){
+                   
+                   
+                   $("#conecktaTokenId").val(token.id);
+               };
+               var var conektaSuccessResponseHand1er= Function(response){
+                    var $form=$("acard-form")
+                   
+                   alert(response-message_to_purchaser)
+               }
+               
+               $(document).ready(function(e)){
+                                 e.preventDefault();
+               var $form=$("#card-form");
+               
+               Conekta.Token.cretaes($form_conektaSuccessResposeHandler.conektaErrorResponseHandler);
+               
+                                 })
+                                 
+               })
+               
+        </script>
+
+    </div>
+    </td>
+    
+  </tr>
+  
+
+</table>
+
+</body>
+</html>
