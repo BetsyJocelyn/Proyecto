@@ -30,7 +30,8 @@
         <a href="contactanos_index.html" id="2">CONTACTANOS</a>
         <a href="sus_index.html" id="3">SUSCRIBETE</a>
         <a href="graficas_index.php" id="4">GRÁFICAS</a>
-        <a href="index.html" id="5">SALIR</a>
+        <a href="nosotros.html" id="5">NOSOTROS</a>
+        <a href="index.html" id="6">SALIR</a>
         <button
           type="button"
           onclick="login();"
