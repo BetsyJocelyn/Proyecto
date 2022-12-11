@@ -102,3 +102,17 @@ h3{
     font-size: 30px;
 }
 
+
+
+#da1,#da2,#da3,#da4,#da5,#da6{
+   font-size: 25px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+#at1,#at2,#at3,#at4,#at5,#at6{
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
