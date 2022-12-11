@@ -58,3 +58,10 @@ body{
 h4{
     color: #000000;
 }
+button{
+    color: hsl(307, 92%, 77%);
+background-color: lightpink;
+border: none;
+border-radius: 1px;
+width: 100px;
+}
