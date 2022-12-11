@@ -26,12 +26,13 @@
         ?>
       </a>
       <nav>
-        <a href="ayuda.html" id="1">AYUDA</a>
-        <a href="contactanos_index.html" id="2">CONTACTANOS</a>
-        <a href="sus_index.html" id="3">SUSCRIBETE</a>
-        <a href="graficas_index.php" id="4">GRÁFICAS</a>
-        <a href="nosotros.html" id="5">NOSOTROS</a>
-        <a href="index.html" id="6">SALIR</a>
+        <a href="cupon/terminado/index.php" id="1">MENU</a>
+        <a href="ayuda.html" id="2">AYUDA</a>
+        <a href="contactanos_index.html" id="3">CONTACTANOS</a>
+        <a href="sus_index.html" id="4">SUSCRIBETE</a>
+        <a href="graficas_index.php" id="5">GRÁFICAS</a>
+        <a href="nosotros.html" id="6">NOSOTROS</a>
+        <a href="index.html" id="7">SALIR</a>
         <button
           type="button"
           onclick="login();"
