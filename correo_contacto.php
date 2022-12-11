@@ -9,10 +9,9 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 set_error_handler("var_dump");
 
-$subject ='Bienvenido Pasteleria, pronto nos pondremos en contacto contigo';
-$msg =  $_POST['msg'];
+$subject ='Bienvenido a Pasteleria';
+$msg = 'Muchas gracias por tu comentario, en breve nos comunicamos contigo';
 $from = $_POST['from'];
-
 
 
 $headers = "From: proyectopasteleria2@gmail.com\r\n"; 
@@ -20,7 +19,7 @@ $headers .= "Reply-To: $from\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=utf-8\r\n"; 
 	
-if(mail($subject,$msg,$from,$headers)){
+if(mail($from,$subject,$msg,$headers)){
 	include ('index.html');
     
 	}else{
