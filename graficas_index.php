@@ -26,10 +26,12 @@
         <img src="imagenes/logo.jpg.webp" style="width: 400px" />
       </a>
       <nav>
-        <a href="" id="1">AYUDA</a>
-        <a href="contactanos_index.html" id="2">CONTACTANOS</a>
-        <a href="sus_index.html" id="3">SUSCRIBETE</a>
-        <a href="graficas_index.php" id="4">GRÁFICAS</a>
+        <a href="cupon/terminado/index.php" id="1">MENU</a>
+        <a href="ayuda.html" id="2">AYUDA</a>
+        <a href="contactanos_index.html" id="3">CONTACTANOS</a>
+        <a href="sus_index.html" id="4">SUSCRIBETE</a>
+        <a href="graficas_index.php" id="5">GRÁFICAS</a>
+        <a href="nosotros.html" id="6">NOSOTROS</a>
         <button
           type="button"
           onclick="login();"
@@ -90,23 +92,18 @@
     
     <div class="container">
       <h1>Graficar Ventas</h1><br>
-      <button id="mostrarGrafica" type="button" class="btn_form">Mostrar</button>
-      <button id="ocultarGrafica" type="button" class="btn_form">Ocultar</button><br>
-      <canvas id="graficaMes"></canvas>
+      <button id="btnGrafica1" type="button" class="btn_form">Ventas Mensuales</button>
+      <button id="btnGrafica2" type="button" class="btn_form">Inventario</button><br>
     </div>
 
-    <script src="graficaMes.js"></script>
-
     <script>
-      $(document).ready(function(){
-        $("#graficaMes").hide();
-
-        $("#mostrarGrafica").click(function(){
-          $("#graficaMes").show();
+      $(document).ready(function(){ 
+        $("#btnGrafica1").click(function(){
+          window.open('grafica1.php');
         });
 
-        $("#ocultarGrafica").click(function(){
-          $("#graficaMes").hide();
+        $("#btnGrafica2").click(function(){
+          window.open('grafica2.php');
         });
       });
     </script>

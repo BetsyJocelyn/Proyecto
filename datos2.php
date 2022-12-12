@@ -1,4 +1,6 @@
 <?php
+  header('Content-Type: application/json');
+
   $servidor = 'localhost';
   $cuenta = 'root';
   $password = '';
@@ -9,13 +11,14 @@
   if($conexion->connect_error){
     die('Error en la conexion');
   }else{
-    $sql = "SELECT ventas FROM ventas_por_mes";
+    $sql = "SELECT nombre, existencia FROM items";
     $result = $conexion->query($sql);
-    $a = array();
-    while($row = $result->fetch_assoc()){
-      array_push($a , $row['ventas']);
+    $data = array();
+    foreach($result as $row){
+      $data[] = $row;
     }
-    echo json_encode($a);
+    $result->close();
+    mysqli_close($conexion);
+    echo json_encode($data);
   }
-  mysqli_close($conexion);
 ?>
