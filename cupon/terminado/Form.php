@@ -1,9 +1,9 @@
 <?php
      session_start();
-    $servidor='localhost:3305';
+    $servidor='localhost';
     $cuenta='root';
     $password='';
-    $bd='tienda';
+    $bd='demo';
      
     //conexion a la base de datos
     $conexion = new mysqli($servidor,$cuenta,$password,$bd);

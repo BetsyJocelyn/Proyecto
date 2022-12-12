@@ -14,7 +14,7 @@
 
     <main>
         <?php
-            $response = json_decode(file_get_contents('http://localhost/terminado/api/productos/api-productos.php?categoria=pastel'), true);
+            $response = json_decode(file_get_contents('http://localhost/cursophp/EXAMEN_FINAL_FINAL/cupon/terminado/api/productos/api-productos.php?categoria=pastel'), true);
 
             if($response['statuscode'] == 200){
                 foreach($response['items'] as $item){
@@ -23,7 +23,7 @@
             }
         ?>
         <?php
-            $response = json_decode(file_get_contents('http://localhost/terminado/api/productos/api-productos.php?categoria=cupcakes'), true);
+            $response = json_decode(file_get_contents('http://localhost/cursophp/EXAMEN_FINAL_FINAL/cupon/terminado/api/productos/api-productos.php?categoria=cupcakes'), true);
             if($response['statuscode'] == 200){
                 foreach($response['items'] as $item){
                     include('layout/items.php');

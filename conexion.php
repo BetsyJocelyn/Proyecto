@@ -1,9 +1,9 @@
 <?php
 function conectar(){
   $servidor = 'localhost';
-  $usuario = 'id19701917_usuario';
-  $contra = '?AO\feH^Y$3zIHl^';
-  $base = 'id19701917_pasteleria';
+  $usuario = 'root';
+  $contra = '';
+  $base = 'demo';
 
   $conexion = new mysqli($servidor,$usuario,$contra,$base);
 

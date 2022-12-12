@@ -2,7 +2,7 @@
   $servidor = 'localhost';
   $cuenta = 'root';
   $password = '';
-  $bd = 'ventas';
+  $bd = 'demo';
 
   $conexion  = new mysqli($servidor,$cuenta,$password,$bd);
 

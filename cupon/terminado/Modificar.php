@@ -1,10 +1,10 @@
 <?php
    session_start();
      
-   $servidor='localhost:3305';
+   $servidor='localhost';
    $cuenta='root';
    $password='';
-   $bd='tienda';
+   $bd='demo';
     
      
     $_SESSION['id'] = '';

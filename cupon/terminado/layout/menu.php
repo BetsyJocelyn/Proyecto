@@ -12,6 +12,7 @@
             <li><a href="index.php">Cupcakes</a></li>
             <li><a href="libros.php">Pasteles</a></li>
             <li><a href="Form.php">Agregar</a></li>
+            <li> <a href="../../index.html">Salir</a></li>
 
 
             <li><li><li><li><li><li><li><li><li><li><li><li><li><li><li><li><li><li><li>

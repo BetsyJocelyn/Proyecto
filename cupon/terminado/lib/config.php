@@ -1,7 +1,7 @@
 <?php
 
-define('HOST', 'localhost:3305');
-define('DB', 'tienda');
+define('HOST', 'localhost');
+define('DB', 'demo');
 define('USER', 'root');
 define('PASSWORD', '');
 
